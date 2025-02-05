@@ -1,0 +1,1223 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+   * A better looking default horizontal rule
+   */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+   * Remove default fieldset styles.
+   */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+   * Allow only vertical resizing of textareas.
+   */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+
+/* ==========================================================================
+     Helper classes
+     ========================================================================== */
+
+/*
+   * Hide visually and from screen readers
+   */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+   * Hide visually and from screen readers, but maintain layout
+   */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+  // <weight>: Use a value from 100 to 900
+  
+  .inter-<uniquifier> {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0; 
+  } */
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  /* color: #FFFFFF; */
+}
+
+.nav__name::after {
+  content: url(smiley.gif);
+}
+
+body {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  background-color: #DDDDDD;
+}
+
+.main {
+  max-width: 1400px;
+  margin: auto;
+  background-color: #FFFFFF;
+}
+
+/* .ibm-plex-sans-hebrew-thin {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-sans-hebrew-extralight {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-sans-hebrew-light {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-sans-hebrew-regular {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-hebrew-medium {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-hebrew-semibold {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-sans-hebrew-bold {
+  font-family: "IBM Plex Sans Hebrew", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+i {
+  font-weight: bold;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+h1,
+.h1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -0.3px;
+  color: #000;
+}
+
+.h1--white {
+  color: #FFFFFF;
+}
+
+
+h2,
+.h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.3px;
+  color: #000;
+}
+
+.h2--grey {
+  color: #8c8c8c;
+}
+
+.h2--orange {
+  color: #FD852F;
+}
+
+.h2--blue {
+  color: #9149ED;
+}
+
+.h2--white {
+  color: #FFFFFF;
+}
+
+h3,
+.h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.3px;
+  color: #000;
+}
+
+h4,
+.h4 {
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+p,
+.para {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #878787;
+}
+
+.para--grey {
+  color: #b9c6be;
+  letter-spacing: -0.4px;
+}
+
+.para--white {
+  color: #FFFFFF;
+}
+
+.para--dark {
+  color: #000;
+}
+
+.button {
+  min-width: 96px;
+  min-height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  border: 1px solid #d6d6d6;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: #FFFFFF;
+}
+
+.button--secondary {
+  background-color: #000;
+  color: #FFFFFF;
+  border: none;
+  margin-left: 5px;
+}
+
+.button--large {
+  min-width: 170px;
+  min-height: 56px;
+  padding: 0 25px;
+}
+
+
+/* header  */
+
+.header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation__item {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+  margin-right: 20px;
+}
+/* hero  */
+
+.hero {
+  padding: 100px 100px;
+  background-color: #B1D8FC;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 70px 70px;
+}
+
+.hero__left {
+  width: 55%;
+}
+
+.styledList {
+  margin-top: 20px;
+}
+
+.styledList__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.hero__leftButton {
+  margin-top: 20px;
+}
+
+.hero__right {
+  width: 45%;
+}
+
+.hero__rightImage {
+  border-radius: 70px 0 70px;
+}
+
+/* companies  */
+
+.companies {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+.companies__header {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.companies__icons {
+  margin-top: 50px;
+}
+
+.icon {
+  width: 108px;
+  padding: 30px;
+}
+
+/* talent  */
+
+.talent {
+  background-color: #332323;
+  padding: 100px 20px;
+  border-radius: 50px;
+}
+
+.talent__header {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.talent__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+  border-bottom: 1px solid #3a3a3a;
+  display: flex;
+  gap: 30px;
+}
+
+.talent__containerLeft,
+.talent__containerRight {
+  max-width: 50%;
+}
+
+.card {
+  background: #474747;
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.card__discription,
+.card__button {
+  margin-top: 20px;
+}
+
+.card__image {
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.card--green {
+  background-color: #3A5C45;
+}
+
+.card--lightblue {
+  margin-top: 30px;
+  padding-bottom: 70px;
+  background-color: #B1D8FC;
+}
+
+.card__button {
+  margin-top: 50px;
+  border: none;
+}
+
+.talent__team {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+label{
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: -0.2px;
+  color: #B0D9FF;
+}
+
+.talent__teamMembers__discription , 
+.talent__teamCustomers__discription , 
+.talent__teamHours__discription{
+  margin-top: 20px;
+}
+
+/* business  */
+
+.business {
+  background-color: #f5f5f5;
+  padding: 100px 20px;
+}
+
+.business__header {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.business__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.business__containerRow1,
+.business__containerRow2 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.business__containerRow1__left,
+.business__containerRow1__right,
+.business__containerRow2__Left,
+.business__containerRow2__right {
+  width: 50%;
+}
+
+.business__containerRow1__leftheader {
+  max-width: 500px;
+}
+
+.business__containerRow1__leftPara,
+.business__containerRow2__rightPara {
+  margin-top: 30px;
+  max-width: 550px;
+}
+
+.business__containerRow1__leftButton,
+.business__containerRow2__rightButton {
+  margin-top: 30px;
+}
+
+
+.business__containerRow2__right {
+  margin-left: 40px;
+}
+
+.business__containerRow2__rightHeader {
+  max-width: 400px;
+}
+
+.business__containerRow1__rightImage,
+.business__containerRow2__LeftImage {
+  border-radius: 25px;
+}
+
+/* faster  */
+
+.faster {
+  background-color: #323232;
+  padding: 100px 20px;
+}
+
+.faster__header {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.faster__container {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #B1D8FC;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.faster__containerLeft__content {
+  margin-left: 40px;
+}
+
+.faster__containerLeft__contentHeader,
+.faster__containerLeft__contentPara,
+.faster__containerLeft__contentButton {
+  margin-top: 30px;
+}
+
+.faster__containerRight__image {
+  border-radius: 0 20px 20px 0;
+}
+
+/* hireGo  */
+
+.hire {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+.hire__header {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.hire__container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hire__containerLeft {
+  max-width: 49%;
+}
+
+.hire__containerRight {
+  max-width: 49%;
+
+}
+
+.hire__card {
+  display: flex;
+  gap: 20px;
+  background-color: #F5F5F5;
+  padding: 30px 40px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.hire__card:last-child{
+  margin-bottom: 0;
+} 
+
+.hire__cardContent__para,
+.hire__cardContent__button {
+  margin-top: 10px;
+}
+
+/* footer  */
+
+.footer {
+  background-color: #1B1B1B;
+  padding: 100px 100px;
+}
+
+.footer__header {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.footer__headerButton {
+  margin: 50px 0;
+}
+
+.footer__main {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #3a3a3a;
+}
+
+.footer__mainLeft__socialIcons {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.footer__mainRight {
+  display: flex;
+  gap: 100px;
+  margin-right: 100px;
+}
+
+.footer__mainRight__navHeading {
+  margin-bottom: 30px;
+}
+
+.nav__listLink {
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 24px;
+  color: #767676;
+}
+
+.nav__list {
+  margin-top: 20px;
+}
+
+.footerBottom__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.footerBottom__copyright {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright__navigation-para {
+  font-family: "Inter";
+  font-size: 12px;
+  line-height: 24px;
+  color: #faf4ee;
+}
+
+.footerBottom__copyright__navList {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__linkList--small {
+  font-size: 12px;
+}
+
+/* responsive start  */
+
+@media (max-width: 1100px) {
+
+  .footer__mainRight {
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  h1,
+  .h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* header  */
+
+  .header__right {
+    display: none;
+  }
+
+  label{
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  /* footer  */
+
+  .footer__mainRight {
+    display: none;
+  }
+
+  .footerBottom__copyright {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .footerBottom__copyright__navList {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+
+  .button--large {
+    min-height: 48px;
+  }
+
+  /* header  */
+
+  .navigation {
+    display: none;
+  }
+
+  /* hero  */
+
+  .hero {
+    display: block;
+    padding: 100px 40px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .hero__left,
+  .hero__right {
+    width: 100%;
+  }
+
+  .hero__rightImage {
+    margin-top: 40px;
+    border-radius: 55px 0 55px;
+  }
+
+  /* companies  */
+
+  .companies {
+    max-width: 100%;
+    padding: 50px 20px;
+  }
+
+  .companies__header {
+    max-width: 100%;
+  }
+
+  .icon {
+    width: 70px;
+    padding: 15px;
+  }
+
+  /* talent  */
+
+  .talent {
+    border-radius: 30px;
+  }
+
+  .talent__header {
+    max-width: 100%;
+  }
+
+  .talent__container,
+  .talent__team {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .talent__containerLeft,
+  .talent__containerRight {
+    max-width: 100%;
+  }
+
+  .card {
+    border-radius: 30px;
+    padding: 30px;
+  }
+
+  .card__image {
+    margin-top: 30px;
+    border-radius: 40px;
+  }
+
+  /* business  */
+
+  .business__header {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .business__container {
+    max-width: 100%;
+  }
+
+  .business__containerRow1 {
+    flex-direction: column-reverse;
+  }
+
+  .business__containerRow2 {
+    flex-direction: column;
+  }
+
+  .business__containerRow1__left,
+  .business__containerRow1__right,
+  .business__containerRow2__Left,
+  .business__containerRow2__right {
+    width: 100%;
+  }
+
+  .business__containerRow1__left,
+  .business__containerRow2__right {
+    margin-top: 50px;
+  }
+
+  .business__containerRow2__right {
+    margin-left: 0;
+  }
+
+  /* faster  */
+
+
+  .faster__header {
+    max-width: 100%;
+  }
+
+  .faster__container {
+    flex-direction: column-reverse;
+  }
+
+  .faster__containerLeft__content {
+    padding: 30px;
+    margin: 0;
+  }
+
+  .faster__containerLeft__contentHeader,
+  .faster__containerLeft__contentPara,
+  .faster__containerLeft__contentButton {
+    margin-top: 20px;
+  }
+
+  .faster__containerRight__image {
+    border-radius: 20px 20px 0 0;
+  }
+
+  /* hireGo  */
+
+
+  .hire__container {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .hire__containerLeft,
+  .hire__containerRight {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .hire__card {
+    padding: 30px 20px;
+  }
+
+  /* footer  */
+
+  .footer {
+    padding: 50px 20px;
+  }
+
+  .footer__main {
+    padding: 50px 0;
+  }
+
+
+  .navigating__heading {
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+
+  i {
+    display: none;
+  }
+
+}
