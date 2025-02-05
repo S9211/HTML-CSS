@@ -1,0 +1,1182 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+   * A better looking default horizontal rule
+   */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+   * Remove default fieldset styles.
+   */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+   * Allow only vertical resizing of textareas.
+   */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+
+/* ==========================================================================
+     Helper classes
+     ========================================================================== */
+
+/*
+   * Hide visually and from screen readers
+   */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+   * Hide visually and from screen readers, but maintain layout
+   */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+  // <weight>: Use a value from 100 to 900
+  
+  .inter-<uniquifier> {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0; 
+  } */
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  /* color: #FFFFFF; */
+}
+
+.nav__name::after {
+  content: url(smiley.gif);
+}
+
+body {
+  font-family: "Inter";
+  background-color: #E5E5E5;
+}
+
+.h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  color: #1C1C1C;
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: -0.8px;
+  font-weight: bold;
+  color: #1C1C1C;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+.h4 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+.h5 {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+.paraLg {
+  font-size: 20px;
+  color: #585757;
+  line-height: 30px;
+  letter-spacing: -0.3px;
+}
+
+.paraMed {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #585757;
+}
+
+.paraSm {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #969696;
+}
+
+.label {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  background-color: #24AFB5;
+  color: #FFFFFF;
+}
+
+.btn {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  border-radius: 7px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  min-width: 129px;
+  min-height: 47px;
+}
+
+.btn--primary {
+  background-color: #24AFB5;
+  color: #FFFFFF;
+}
+
+.btn--secondary {
+  border: 1px solid #DBDBDB;
+  background-color: #fff;
+}
+
+.btn--secondaryDark {
+  background-color: #24AFB5;
+  color: #FFFFFF;
+}
+
+.btn--anchor {
+  font-weight: 600;
+  background-color: #fff;
+  color: #24AFB5;
+}
+
+.btn--anchor:hover {
+  text-decoration: underline;
+}
+
+svg {
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #cdcdcd;
+}
+
+li {
+  list-style: none;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+
+/* site start  */
+
+.main {
+  max-width: 1440px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 30px 15px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__logo {
+  margin: 0 50px;
+  cursor: pointer;
+}
+
+.header__linkList,
+.footer__linkList {
+  color: #1C1C1C;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.menu a{
+  color: #000;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+/* common classes  */
+
+.hero__section,
+.features__section,
+.call__section,
+.statistics__section,
+.short__section,
+.testimonial__section,
+.over__section,
+.action__section,
+.price__section,
+.footer__section {
+  border-bottom: 2px solid #E5E5E5;
+  padding: 80px 30px;
+
+}
+
+.call__container,
+.features__container,
+.action__container,
+.statistics__container,
+.price__container,
+.footer__container,
+.copyright__container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* hero  */
+
+.hero__section {
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.hero__container {
+  display: flex;
+}
+
+.hero__left {
+  max-width: 50%;
+  padding-left: 100px;
+  margin-top: 50px;
+}
+
+.hero__header {
+  margin-bottom: 30px;
+}
+
+.hero__discription {
+  max-width: 80%;
+}
+
+.hero__form {
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+.hero__inputName,
+.hero__inputEmail {
+  padding-left: 20px;
+  margin-top: 10px;
+  width: 450px;
+  min-height: 43px;
+  color: #969696;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+  border: .5px solid #969696;
+  border-radius: 7px;
+}
+
+.hero__para {
+  margin-top: 20px;
+  width: 50%;
+}
+
+.hero__inputBtn {
+  margin-top: 20px;
+}
+
+
+.hero__right {
+  max-width: 50%;
+}
+
+/* call on action  */
+
+
+.call__container {
+  align-items: center;
+}
+
+.call__col1 {
+  max-width: 50%;
+}
+
+.call__discription {
+  margin-top: 30px;
+  max-width: 80%;
+}
+
+.call__inputEmail {
+  padding-left: 20px;
+  width: 359px;
+  min-height: 43px;
+  color: #969696;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+  border: .5px solid #969696;
+  border-radius: 7px;
+}
+
+.call__inputBtn {
+  margin-left: 5px;
+}
+
+/* over  */
+
+.over__container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.over__icon {
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.over__content {
+  width: 60%;
+  margin: auto;
+}
+
+
+/* features  */
+
+.features__container {
+  justify-content: flex-start;
+}
+
+.features__left {
+  max-width: 45%;
+}
+
+.features__header {
+  margin-top: 20px;
+  display: flex;
+}
+
+.features__heading {
+  margin-left: 10px;
+}
+
+.features__para {
+  margin-top: 10px;
+  width: 80%;
+}
+
+.features__right {
+  max-width: 55%;
+}
+
+/* statistics  */
+
+.statistics__header {
+  display: flex;
+  align-items: center;
+}
+
+.statistics__header {
+  margin-left: 15px;
+}
+
+.statistics__middle {
+  display: flex;
+  gap: 40px;
+}
+
+.statistics__discription {
+  margin: 10px 0 30px 50px;
+}
+
+.statistics__right {
+  max-width: 30%;
+}
+
+.statistics__para2 {
+  margin-top: 20px;
+}
+
+/* short  */
+
+.short__section {
+  padding-bottom: 0;
+}
+
+.short__container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.short__header {
+  margin-bottom: 40px;
+}
+
+
+.short__subHeading {
+  margin-top: 10px;
+}
+
+.short__wrapers {
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.short__image {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* testimonial  */
+
+.testimonial__container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.testimonial__content {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.short__para {
+  max-width: 700px;
+  margin: auto;
+}
+
+.testimonial__user,
+.testimonial__button {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.testimonial__userHeading {
+  margin-top: 20px;
+}
+
+.testimonial__userPara {
+  margin-top: 10px;
+}
+
+/* price  */
+
+.price__wraper {
+  text-align: center;
+  border: 1px solid #DBDBDB;
+  border-radius: 7px;
+  padding: 40px 30px;
+  position: relative;
+}
+
+.price__label {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.price__heading,
+.price__feature,
+.price__button,
+.price__para {
+  margin-top: 20px;
+}
+
+
+.price__para {
+  width: 300px;
+}
+
+.button__icon {
+  margin-left: 10px;
+}
+
+.price__wraper:hover {
+  border: 1px solid #24AFB5;
+  ;
+}
+
+.price__button:hover {
+  background-color: #24AFB5;
+  color: #FFFFFF;
+  border: none;
+}
+
+
+
+/* footer  */
+
+.footer__nav {
+  margin-left: 60px;
+  display: flex;
+  gap: 25px;
+}
+
+.footer__socialIcons {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.footer__copyright {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+/* responsive start  */
+
+@media (max-width: 1200px) {
+
+  /* hero  */
+
+  .hero__left {
+    margin-top: 20px;
+  }
+
+  .hero__header {
+    margin-bottom: 10px;
+  }
+
+  .hero__discription {
+    width: 80%;
+  }
+
+  .hero__form {
+    margin-top: 10px;
+  }
+
+  .hero__inputName,
+  .hero__inputEmail {
+    width: 350px;
+  }
+
+  .hero__para {
+    margin-top: 10px;
+    width: 70%;
+  }
+
+  .hero__inputBtn {
+    margin-top: 10px;
+  }
+
+
+  /* price  */
+
+
+  .price__wraper {
+    padding: 40px 21px;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .header__logo {
+    margin: 0 30px;
+  }
+
+  .call__inputBtn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  /* features  */
+
+  .features__header {
+    margin-top: 10px;
+  }
+
+  .price__wraper {
+    padding: 35px 1px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  /* hero  */
+
+  .hero__section {
+    padding: 50px 0 50px 20px;
+  }
+
+  .hero__container {
+    flex-direction: column-reverse;
+  }
+
+  .hero__left {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero__inputName,
+  .hero__inputEmail {
+    width: 90%;
+  }
+
+  .hero__inputBtn {
+    margin: 20px 0;
+  }
+
+  .hero__right {
+    max-width: 100%;
+  }
+
+  .price__section {
+    padding: 50px 20px;
+  }
+
+  .price__container {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .statistics__container {
+    flex-direction: column;
+  }
+
+  .statistics__left {
+    max-width: 100%;
+  }
+
+  .statistics__right {
+    max-width: 100%;
+  }
+
+  .statistics__middle {
+    margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  /* header  */
+
+  .header__menu {
+    justify-content: space-between;
+  }
+
+
+  /* over  */
+
+  .over__content {
+    width: 100%;
+    margin: auto;
+  }
+
+
+  /* features  */
+
+  .features__left {
+    max-width: 100%;
+  }
+
+  .features__heading {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .features__right {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  /* commmon classes  */
+
+  .statistics__section,
+  .features__section,
+  .call__section,
+  .footer__section {
+    padding: 50px 20px;
+  }
+
+  .features__container,
+  .over__container,
+  .call__container,
+  .footer__container,
+  .copyright__container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  /* short  */
+
+  .short__header {
+    text-transform: capitalize;
+  }
+
+  /* max-width display none common classes  */
+
+
+  .header__linkItem,
+  .hero__discription,
+  .over__discription,
+  .features__para,
+  .short__discription,
+  .short__headerMobile,
+  .testimonial__arrow,
+  .footer__copyright {
+    display: none;
+  }
+
+  .short__wrapers {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+
+  /* call to action  */
+
+  .call__col1 {
+    max-width: 100%;
+  }
+
+  .call__header {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+  }
+
+  .call__discription {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .call__col2 {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  .call__inputEmail {
+    width: 80%;
+  }
+
+  .call__inputBtn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+
+  /* footer */
+  .footer__nav {
+    flex-wrap: wrap;
+    margin: 20px 0 20px 0;
+    gap: 20px;
+    justify-content: center;
+  }
+
+
+  .footer__copyrightMobile {
+    margin-bottom: 20px;
+    width: 200px;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  /* mobile device display none  */
+
+  i,
+  .over__discriptionMobile,
+  .features__paraMobile,
+  .short__discriptionMobile,
+  .footer__copyrightMobile,
+  .testimonial__userSliderDots,
+  .hero__discriptionMobile {
+    display: none;
+  }
+
+}
