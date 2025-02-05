@@ -1,0 +1,1064 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+   * A better looking default horizontal rule
+   */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+   * Remove default fieldset styles.
+   */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+   * Allow only vertical resizing of textareas.
+   */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+
+/* ==========================================================================
+     Helper classes
+     ========================================================================== */
+
+/*
+   * Hide visually and from screen readers
+   */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+   * Hide visually and from screen readers, but maintain layout
+   */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.epilogue-<uniquifier> {
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  /* color: #FFFFFF; */
+}
+
+.nav__name::after {
+  content: url(smiley.gif);
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: #DDDDDD;
+}
+
+.main {
+  max-width: 1400px;
+  margin: auto;
+  background-color: #FFFFFF;
+}
+
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+h1,
+.h1 {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 60px;
+  color: #262B31;
+}
+
+.h1--grey {
+  color: #664033;
+}
+
+
+h2,
+.h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  color: #262B31;
+}
+
+h3,
+.h3 {
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 50px;
+  color: #262B31;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  line-height: 40px;
+  color: #262B31;
+  font-weight: bold;
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+  line-height: 32px;
+  color: #6E6D6D;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+  line-height: 24px;
+  color: #39364E;
+  font-weight: 500;
+}
+
+.h6--blue {
+  font-size: 14px;
+  line-height: 20px;
+  color: #7854F7;
+  font-weight: bold;
+}
+
+.h6--dark{
+  font-size: 14px;
+  line-height: 20px;
+  color: #39364E;
+  font-weight: 300;
+}
+
+p,
+.para {
+  font-size: 18px;
+  line-height: 40px;
+  color: #6E6D6D;
+}
+
+.para--large{
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: -0.3px;
+  color: #494949;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.para--dark{
+  line-height: 30px;
+  color: #262B31;
+}
+
+.para--med {
+  font-size: 13px;
+  line-height: 21px;
+  color: #696969;
+}
+
+
+.para--sm {
+  font-size: 12px;
+  color: #39364E;
+}
+
+span{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+  color: #6E6D6D;
+}
+
+.button {
+  min-width: 134px;
+  min-height: 51px;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.button--primary {
+  border-radius: 0%;
+  border: none;
+  background-color: #262B31;
+}
+
+.button--secondary {
+  min-width: 250px;
+  background-color: #664033;
+  color: #FFFFFF;
+  border: none;
+}
+
+
+/* header  */
+
+.header{
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__item {
+  font-size: 17px;
+  color: #2D2D2D;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+  margin-right: 20px;
+}
+
+.navigation__item:last-child {
+  margin-right: 0;
+}
+
+.navigation-mobile{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 1;
+  background-color: #FFFFFF;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+}
+
+.header__button{
+  border: none;
+  background-color: #FFFFFF;
+}
+
+/* hero  */
+
+.hero{
+  padding: 50px 100px;
+  background-image: linear-gradient(to right, #E0D9D3, #B7AEAC); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__left{
+  max-width: 60%;
+}
+
+.hero__discription , .healthySkin__discription{
+  margin-top: 40px;
+  width: 95%;
+}
+
+.hero__button , .healthySkin__button{
+  margin-top: 30px;
+}
+
+.arrow{
+  margin-left: 10px;
+}
+
+.hero__img{
+  border: 1px solid #2AB673;
+  border-radius: 0 180px 0; 
+}
+
+/* treatment  */
+
+.treatment{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 100px 30px;
+  gap: 40px;
+}
+
+.treatment__left{
+  max-width: 60%;
+}
+
+.treatment__discription{
+  max-width: 88%;
+}
+
+/* vision  */
+
+.vision{
+  background-color: #EEEFE9;
+}
+
+.vision__container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vision__left{
+  max-width: 35%;
+}
+
+.vision__img{
+  border-radius: 45px;
+}
+
+.vision__right{
+  max-width: 55%;
+  padding: 20px;
+}
+
+.vision__discription{
+  margin-top: 40px;
+}
+
+.vision__orderedList{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  color: #664033;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.linkList{
+  margin-left: 20px;
+}
+
+.vision__button{
+  margin-top: 30px;
+  margin-left: 160px;
+}
+
+/* treatmentOption  */
+
+.treatmentOption, .gallery{
+  padding: 100px 20px;
+}
+
+.treatmentOption__header{
+  max-width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.treatmentOption__cards , .gallery__container{
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.card{
+  max-width: 31%;
+  margin: auto;
+}
+
+.card__icon{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.treatmentOption__discription{
+  padding: 100px 100px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* testimonial  */
+
+.testimonial{
+  background-color: #F5F4F0;
+  padding: 50px 20px;
+}
+
+.testimonial__header{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonial__container{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial__card{
+  max-width: 30%;
+  padding: 50px 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.card__right{
+  max-width: 75%;
+}
+
+.card__subHeading{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.card__Heading{
+  margin-top: 20px;
+}
+
+
+/* gallery  */
+
+.gallery__header{
+  max-width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery__card{
+  background-color: #f2f2f2;
+  padding: 100px 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+.gallery__dots{
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  background-color: #7fd3ab;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.dot--red{
+  background-color: #2AB673;
+}
+
+/* healthySkin  */
+
+.healthySkin{
+  padding: 100px 100px;
+  background-color: #F5F4F0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.healthySkin__header{
+  margin-top: 20px;
+}
+
+.healthySkin__left {
+  max-width: 55%;
+}
+
+.healthySkin__img{
+  border-radius: 35px;
+}
+
+/* companies  */
+
+.companies{
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+}
+
+/* footer  */
+
+.footer{
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+.footer__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__header{
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer__para{
+  margin-bottom: 20px;
+}
+
+.footer__right{
+  text-align: center;
+}
+
+.footer__formEmail{
+  width: 350px;
+  min-height: 50px;
+  background-color: #F3F3F3;
+  border: none;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  padding-left: 30px;
+}
+
+.footer__button{
+  margin-top: 30px;
+}
+
+::placeholder{
+  color: #262B31;
+}
+
+/* responsive start  */
+
+@media (max-width: 1000px){
+
+  /* footer  */
+
+.footer__container{
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.footer__middle{
+  text-align: center;
+}
+
+.footer__formEmail{
+  width: 220px;
+}
+
+.footer__button{
+  margin-top: 30px;
+}
+
+}
+
+@media (max-width: 767px) {
+
+  h1,
+  .h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  /* header  */
+
+  .navigation{
+    display: none;
+  }
+
+  /* hero  */
+
+  .hero{
+    padding: 50px 20px;
+    background-image: linear-gradient(to right, #E0D9D3, #B7AEAC); 
+    flex-direction: column;
+  }
+
+  .arrow{
+    margin-left: 5px;
+  }
+  
+  .hero__img{
+    margin-top: 40px;
+  }
+
+  /* treatment  */
+
+  .treatment{
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+  
+  .hero__left,
+  .treatment__left , 
+  .treatment__discription,
+  .vision__left ,
+  .vision__right,
+  .card__right,
+  .gallery__header
+  {
+    max-width: 100%;
+  }
+
+  /* vision  */
+
+  
+  .vision__container{
+    padding: 50px 20px;
+    flex-direction: column;
+  }
+
+  .vision__orderedList{
+    flex-direction: column;
+  }
+
+  .vision__button{  
+    margin-left: 0px;
+  }
+
+  /* treatmentOption  */
+
+.treatmentOption, .gallery{
+  padding: 50px 20px;
+}
+
+.treatmentOption__header{
+  max-width: 100%;
+}
+
+.treatmentOption__container , .gallery__container{
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card{
+  max-width: 80%;
+}
+
+.treatmentOption__discription{
+  padding: 50px 0 0;
+}
+
+/* testimonial  */
+
+.testimonial__container{
+  flex-direction: column;
+}
+
+.testimonial__card{
+  max-width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+/* healthySkin  */
+
+.healthySkin{
+  padding: 50px 20px;
+  flex-direction: column;
+}
+
+.healthySkin__left{
+  max-width: 100%;
+}
+
+.healthySkin__img{
+  margin-top: 40px;
+  border-radius: 60px;
+}
+
+/* companies  */
+
+.companies{
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+}
+
+
+
+@media (min-width: 768px){
+  i {
+    display: none;
+  }
+
+  .navigation-mobile{
+    display: none;
+  }
+
+}
