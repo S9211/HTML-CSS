@@ -596,6 +596,10 @@ p,
   gap: 30px;
 }
 
+.navigation{
+  display: flex;
+}
+
 .navigation__item {
   font-size: 16px;
   color: #000;
